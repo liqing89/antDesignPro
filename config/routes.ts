@@ -11,28 +11,40 @@
  * @doc https://umijs.org/docs/guides/routes
  */
 export default [
-  // {
-  //   path: '/user',
-  //   layout: false,
-  //   routes: [
-  //     {
-  //       name: 'login',
-  //       path: '/user/login',
-  //       component: './User/Login',
-  //     },
-  //   ],
-  // },
   {
-    path: '/welcome',
-    name: 'welcome', // auto translate eng to chn?
-    icon: 'smile',
-    component: './Welcome',
+    path: '/user',
+    layout: false,
+    routes: [
+      {
+        name: 'login',
+        path: '/user/login',
+        component: './User/Login',
+      },
+    ],
+  },
+  {
+    path: '/dashboard',
+    name: 'Dashboard',
+    icon: 'Dashboard',
+    component: './Dashboard',
   },
   {
     path: '/mainpage',
-    name: '主页',
+    name: 'Diary',
     icon: 'fire',
     component: './MainPage',
+  },
+  {
+    path: '/problemsrecord',
+    name: 'Q&A',
+    icon: 'ClockCircle',
+    component: './ProblemsRecord',
+  },
+  {
+    path: '/welcome',
+    name: '使用指南', // auto translate eng to chn?
+    icon: 'bell',
+    component: './Welcome',
   },
   // {
   //   path: '/admin',
@@ -51,12 +63,12 @@ export default [
   //     },
   //   ],
   // // },
-  {
-    name: 'list.table-list',
-    icon: 'table',
-    path: '/list',
-    component: './TableList',
-  },
+  // {
+  //   name: 'list.table-list',
+  //   icon: 'table',
+  //   path: '/list',
+  //   component: './TableList',
+  // },
   // {
   //   path: '/',
   //   redirect: '/welcome',

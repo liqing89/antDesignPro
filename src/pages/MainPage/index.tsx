@@ -1,19 +1,6 @@
+import { ProCard, ProFormDatePicker, ProFormSelect } from '@ant-design/pro-components';
+import { Button, Card, Col, Form, Input, Row, Space, theme } from 'antd';
 import React from 'react';
-import {
-  theme,
-  Card,
-  Space,
-  Button,
-  Form,
-  Input,
-  Row,
-  Col,
-} from "antd";
-import {
-  ProFormSelect,
-  ProFormDatePicker,
-} from "@ant-design/pro-components";
-
 
 const { TextArea } = Input;
 
@@ -28,13 +15,16 @@ const MainPage: React.FC = () => {
     //   </div>
     // </ProCard>
     <Row gutter={10}>
-      <Col xl={14} lg={16} md={18} sm={20} xs={24}>
+      <Col span={8}>
+        <ProCard title="test"></ProCard>
+      </Col>
+      <Col xl={16} lg={18} md={20} sm={22} xs={24}>
         <Card>
           <div>
             <div
-              key='pageTitle'
+              key="pageTitle"
               style={{
-                padding:'10px',
+                padding: '10px',
                 fontSize: '20px',
                 fontWeight: 'bold',
                 color: token.colorTextHeading,
@@ -43,11 +33,11 @@ const MainPage: React.FC = () => {
               MEMO
             </div>
             <Form>
-              <Space direction="horizontal" style={{ paddingLeft:'10px'}}>
-                <ProFormDatePicker name="date" label="日期" placeholder="請選擇"/>
+              <Space direction="horizontal" style={{ paddingLeft: '10px' }}>
+                <ProFormDatePicker name="date" label="日期" placeholder="請選擇" />
                 <div style={{ width: '20px' }} />
                 <ProFormSelect
-                  name="select-multiple"
+                  name="select-single"
                   label="工作條目"
                   valueEnum={{
                     research: '課題',
@@ -59,7 +49,7 @@ const MainPage: React.FC = () => {
                   }}
                   placeholder="請選擇"
                   style={{
-                    minWidth:'200px',
+                    minWidth: '200px',
                   }}
                   rules={[
                     {
@@ -70,7 +60,7 @@ const MainPage: React.FC = () => {
                   ]}
                 />
               </Space>
-              <Form.Item label="內容" style={{paddingLeft:'10px'}}>
+              <Form.Item label="內容" style={{ paddingLeft: '10px' }}>
                 <TextArea rows={4} />
               </Form.Item>
               <Form.Item wrapperCol={{ span: 18, offset: 10 }}>
@@ -78,11 +68,6 @@ const MainPage: React.FC = () => {
               </Form.Item>
             </Form>
           </div>
-        </Card>
-      </Col>
-      <Col span={10}>
-        <Card title='Todo List'>
-
         </Card>
       </Col>
     </Row>
